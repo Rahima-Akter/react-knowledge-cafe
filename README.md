@@ -1,9 +1,12 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## This is a simple React project.
 
-Currently, two official plugins are available:
+## project-Name:
+    --> react-knowledge-cafe
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# react-knowledge-cafe
+## All the data was fatched using json data
+
+## Features of this project
+    --> can bookmark blogs with the bookmark button click
+    --> can see the length of bookmarked blogs
+    --> can see the total reading time with the click of Mark as read button

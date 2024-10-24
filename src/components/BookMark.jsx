@@ -1,12 +1,13 @@
-const BookMark = () => {
+/* eslint-disable react/prop-types */
+const BookMark = ({ blog, time }) => {
     return (
         <div className='w-1/3'>
-            <div className="border border-purple-800 bg-purple-200 rounded-md p-4 text-xl text-center font-bold">Spent Time On Reading: 0 min</div>
-            <div className="mt-3 rounded-md text-center">
-                <div className="bg-gray-100 h-screen">
-                    <h1 className="font-bold text-xl pt-4">BookMarked Blogs: 0</h1>
-                    <p className="bg-white mx-4 py-4 rounded-md shadow-md my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, dignissimos!</p>
-                </div>
+            <div className="border border-purple-800 bg-purple-200 rounded-md p-4 text-xl text-center font-bold">Spent Time On Reading: {time} min</div>
+            <div className="mt-3 rounded-md text-center bg-gray-100 h-[90%]">
+                <h1 className="font-bold text-xl pt-4">BookMarked Blogs: {blog.length}</h1>
+                {
+                    blog.map((title, idx) => <div key={idx} className="bg-white text-xl font-bold mx-4 p-4 rounded-md shadow-md my-3">{title.title}</div>)
+                }
             </div>
         </div>
     );

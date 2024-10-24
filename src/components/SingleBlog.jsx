@@ -1,11 +1,10 @@
 /* eslint-disable react/prop-types */
-const SingleBlog = ({ blog, addToBookmark }) => {
+const SingleBlog = ({ blog, addToBookmark, handleReadingTime }) => {
     return (
-        <div className="">
+        <div className="mb-8">
             <figure>
                 <img
                     src={blog.cover}
-                    // eslint-disable-next-line react/prop-types
                     alt={blog.title} 
                     className="w-full h-[350px] object-cover" />
             </figure>
@@ -19,7 +18,7 @@ const SingleBlog = ({ blog, addToBookmark }) => {
                 </div>
                 <div className="flex gap-5 items-center">
                     <p>Reading Time: {blog.reading_time} min</p>
-                    <button onClick={() => addToBookmark()}><i className="fa-regular fa-bookmark text-red-600 text-xl"></i></button>
+                    <button onClick={() => {addToBookmark(blog), handleReadingTime(blog.reading_time)}}><i className="fa-regular fa-bookmark text-red-600 text-xl"></i></button>
                 </div>
             </div>
             <h1 className="font-bold text-2xl md:text-4xl mt-3">How to get your first job as a self-taught programmer</h1>
